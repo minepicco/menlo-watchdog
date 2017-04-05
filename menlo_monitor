@@ -15,7 +15,7 @@ mbodyb="Please Access **** and check process.\n If process is not running, execu
 pr=`ps -ef | grep "sh /home/nohara/menlotest.sh" -c`
 
  if [ $pr -eq 2 ]; then
-   /home/nohara/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitleg -m $mbodyg
+   /home/***/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitleg -m $mbodyg
  else
-   /home/nohara/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitleb -m $mbodyb
+   /home/***/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitleb -m $mbodyb
  fi
