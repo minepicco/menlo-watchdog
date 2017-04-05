@@ -24,7 +24,7 @@ do
 ## email alerting
  cnt=`sed -e '1d'  /home/***/menlo/menloout.txt | sed -e '$d' | jq .result.events | grep $url -B2 | grep $usr -c`
  if [ $cnt -lt 1 ]; then
-   /home/nohara/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitle -m $mbody -a /home/***/menlo/menloout.txt
+   /home/***/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitle -m $mbody -a /home/***/menlo/menloout.txt
    sed -e '1d'  /home/***/menlo/menloout.txt | sed -e '$d' | jq .result.events | grep $url -B2 | grep $usr -c
  fi
  sleep $i
