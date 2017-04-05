@@ -12,7 +12,7 @@ mtitleb=":-( Menlo Monitor process is NOT working :-( "  # Email title
 mbodyb="Please Access **** and check process.\n If process is not running, execute: \"/home/***/menlotest.sh &\" " # Email body
 
 # Process Check
-pr=`ps -ef | grep "sh /home/nohara/menlotest.sh" -c`
+pr=`ps -ef | grep "sh /home/***/menlotest.sh" -c`
 
  if [ $pr -eq 2 ]; then
    /home/***/email/sendEmail-v1.56/sendEmail -f $fromadd -t $toadd -s $smtp -u $mtitleg -m $mbodyg
